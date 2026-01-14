@@ -1,37 +1,32 @@
-const brands = [
-  { name: "Bticino", category: "Eléctricos" },
-  { name: "Philips", category: "Eléctricos" },
-  { name: "GE", category: "Eléctricos" },
-  { name: "3M", category: "Industrial" },
-  { name: "Stanley", category: "Herramientas" },
-  { name: "Black & Decker", category: "Herramientas" },
-  { name: "Bosch", category: "Herramientas" },
-  { name: "DeWalt", category: "Herramientas" },
-  { name: "Bahco", category: "Herramientas" },
-  { name: "Sika", category: "Construcción" },
-  { name: "Chema", category: "Construcción" },
-  { name: "Pavco", category: "Gasfitería" },
-  { name: "Rotoplas", category: "Gasfitería" },
-  { name: "Vainsa", category: "Sanitarios" },
-  { name: "Celima", category: "Cerámicos" },
-  { name: "Pirámide", category: "Construcción" },
-  { name: "Yale", category: "Seguridad" },
-  { name: "Cantol", category: "Seguridad" },
-  { name: "Forte", category: "Seguridad" },
-  { name: "Tekno", category: "Pinturas" },
-  { name: "CPP", category: "Pinturas" },
-  { name: "American Colors", category: "Pinturas" },
-  { name: "Duracell", category: "Eléctricos" },
-  { name: "Energizer", category: "Eléctricos" },
-  { name: "Brochas Tumi", category: "Pinturas" },
-  { name: "Brochas Águila", category: "Pinturas" },
-  { name: "Stretto", category: "Accesorios" },
-  { name: "Abralit", category: "Industrial" },
+import logo3m from "@/assets/brands/3m.svg";
+import logoBlackDecker from "@/assets/brands/blackdecker.svg";
+import logoBosch from "@/assets/brands/bosch.svg";
+import logoEnergizer from "@/assets/brands/energizer.svg";
+import logoGe from "@/assets/brands/ge.svg";
+import logoPhilips from "@/assets/brands/philips.svg";
+import logoStanley from "@/assets/brands/stanley.svg";
+
+// Marcas con logos
+const brandsWithLogos = [
+  { name: "Stanley", logo: logoStanley },
+  { name: "Bosch", logo: logoBosch },
+  { name: "Black & Decker", logo: logoBlackDecker },
+  { name: "Philips", logo: logoPhilips },
+  { name: "3M", logo: logo3m },
+  { name: "GE", logo: logoGe },
+  { name: "Energizer", logo: logoEnergizer },
+];
+
+// Marcas adicionales sin logo (texto estilizado)
+const additionalBrands = [
+  "DeWalt", "Bticino", "Bahco", "Sika", "Chema", "Pavco", "Rotoplas", 
+  "Vainsa", "Celima", "Yale", "Cantol", "Forte", "Tekno", "CPP", 
+  "American Colors", "Duracell", "Pirámide", "Abralit"
 ];
 
 const BrandsSection = () => {
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section className="py-12 md:py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
           <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
@@ -45,21 +40,38 @@ const BrandsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
-            {brands.map((brand) => (
+        <div className="max-w-6xl mx-auto">
+          {/* Logos principales */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-4 md:gap-6 mb-8 md:mb-12">
+            {brandsWithLogos.map((brand) => (
               <div
                 key={brand.name}
-                className="bg-white rounded-xl p-3 md:p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 text-center group"
+                className="bg-white rounded-xl p-4 md:p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex items-center justify-center aspect-square"
               >
-                <p className="font-heading font-bold text-sm md:text-base text-foreground group-hover:text-primary transition-colors">
-                  {brand.name}
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {brand.category}
-                </p>
+                <img
+                  src={brand.logo}
+                  alt={`Logo ${brand.name}`}
+                  className="w-full h-full object-contain max-h-12 md:max-h-16 filter grayscale hover:grayscale-0 transition-all duration-300"
+                />
               </div>
             ))}
+          </div>
+
+          {/* Marcas adicionales en texto */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm">
+            <p className="text-center text-xs md:text-sm text-muted-foreground mb-4 uppercase tracking-wider font-medium">
+              Y muchas más marcas de calidad
+            </p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-x-6 md:gap-y-3">
+              {additionalBrands.map((brand) => (
+                <span
+                  key={brand}
+                  className="text-sm md:text-base lg:text-lg font-heading font-bold text-foreground/70 hover:text-primary transition-colors cursor-default"
+                >
+                  {brand}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
