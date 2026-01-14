@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-ferrot-red-dark shadow-ferrot hover:shadow-ferrot-hover",
+        default: "bg-primary text-white hover:bg-primary/90 shadow-ferrot hover:shadow-ferrot-hover",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-ferrot-gray-dark",
+        outline: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-ferrot-red-dark shadow-ferrot hover:shadow-ferrot-hover text-base",
+        hero: "bg-primary text-white hover:bg-primary/90 shadow-ferrot hover:shadow-ferrot-hover text-base",
         heroOutline: "border-2 border-white/80 bg-transparent text-white hover:bg-white hover:text-ferrot-black text-base",
-        cta: "bg-gradient-to-r from-ferrot-red to-ferrot-red-dark text-white hover:from-ferrot-red-dark hover:to-ferrot-red shadow-ferrot hover:shadow-ferrot-hover",
+        cta: "bg-primary text-white hover:bg-primary/85 shadow-ferrot hover:shadow-ferrot-hover font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",
