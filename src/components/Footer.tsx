@@ -14,7 +14,7 @@ const Footer = () => {
               <img 
                 src={logoFerrot} 
                 alt="Ferrot E.I.R.L." 
-                className="h-16 w-auto bg-white p-2 rounded-lg"
+                className="h-14 w-auto brightness-110 drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
               />
             </div>
             <p className="text-white/60 mb-4">
