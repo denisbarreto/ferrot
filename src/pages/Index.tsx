@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import LeadCaptureSection from "@/components/LeadCaptureSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         <LeadCaptureSection />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
