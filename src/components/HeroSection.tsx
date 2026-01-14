@@ -56,7 +56,12 @@ const HeroSection = () => {
                 Cotiza Ahora
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="heroOutline" size="lg" className="text-sm md:text-base">
+              <Button 
+                variant="heroOutline" 
+                size="lg" 
+                className="text-sm md:text-base"
+                onClick={() => document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <FileText className="w-4 h-4 md:w-5 md:h-5" />
                 Catálogo
               </Button>
