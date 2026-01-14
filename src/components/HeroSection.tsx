@@ -14,7 +14,6 @@ const HeroSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Lead captured:", formData);
-    // Here you would typically send this to your backend
     alert("¡Gracias! Un asesor se pondrá en contacto contigo pronto.");
     setFormData({ name: "", phone: "", email: "" });
   };
@@ -38,7 +37,7 @@ const HeroSection = () => {
           <div className="text-white animate-fade-in-up">
             <div className="inline-block px-4 py-2 bg-primary/20 border border-primary/40 rounded-full mb-6">
               <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-                Ferretería Digital #1 en México
+                Ferretería Digital #1 en Perú
               </span>
             </div>
 
@@ -71,7 +70,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full" />
-                Envío a todo México
+                Envío a todo el Perú
               </div>
             </div>
           </div>
