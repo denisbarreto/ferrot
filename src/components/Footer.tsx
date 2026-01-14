@@ -66,8 +66,8 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Teléfono</p>
-                  <a href="tel:+525555555555" className="hover:text-primary transition-colors">
-                    55 5555 5555
+                  <a href="tel:+5119876543" className="hover:text-primary transition-colors">
+                    (01) 987 6543
                   </a>
                 </div>
               </li>
@@ -75,8 +75,8 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Correo</p>
-                  <a href="mailto:contacto@ferrot.com" className="hover:text-primary transition-colors">
-                    contacto@ferrot.com
+                  <a href="mailto:contacto@ferrot.pe" className="hover:text-primary transition-colors">
+                    contacto@ferrot.pe
                   </a>
                 </div>
               </li>
@@ -84,7 +84,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Dirección</p>
-                  <p>Av. Principal #123, CDMX, México</p>
+                  <p>Av. Javier Prado Este 123, San Isidro, Lima, Perú</p>
                 </div>
               </li>
             </ul>
