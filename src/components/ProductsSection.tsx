@@ -40,6 +40,20 @@ const products = [
 ];
 
 const ProductsSection = () => {
+  const handleProductClick = (productName: string) => {
+    const message = encodeURIComponent(
+      `¡Hola! Me interesa obtener información sobre: ${productName}. ¿Podrían ayudarme con precios y disponibilidad?`
+    );
+    window.open(`https://wa.me/51970856345?text=${message}`, "_blank");
+  };
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contacto");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="productos" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -84,10 +98,25 @@ const ProductsSection = () => {
                 <p className="text-white/70 text-xs md:text-sm mb-3 md:mb-4 line-clamp-2">
                   {product.description}
                 </p>
-                <Button variant="heroOutline" size="sm" className="group/btn text-xs md:text-sm h-8 md:h-9 px-3 md:px-4">
-                  Ver más
-                  <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <div className="flex gap-2">
+                  <Button 
+                    variant="heroOutline" 
+                    size="sm" 
+                    className="group/btn text-xs md:text-sm h-8 md:h-9 px-3 md:px-4"
+                    onClick={() => handleProductClick(product.name)}
+                  >
+                    Consultar
+                    <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                  <Button 
+                    variant="heroOutline" 
+                    size="sm" 
+                    className="text-xs md:text-sm h-8 md:h-9 px-3 md:px-4"
+                    onClick={scrollToContact}
+                  >
+                    Cotizar
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
