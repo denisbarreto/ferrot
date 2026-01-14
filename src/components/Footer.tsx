@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Smartphone } from "lucide-react";
+import logoFerrot from "@/assets/logo-ferrot.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,15 +10,19 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-xl">F</span>
-              </div>
-              <span className="font-heading font-bold text-2xl">Ferrot</span>
+            <div className="mb-6">
+              <img 
+                src={logoFerrot} 
+                alt="Ferrot E.I.R.L." 
+                className="h-16 w-auto bg-white p-2 rounded-lg"
+              />
             </div>
+            <p className="text-white/60 mb-4">
+              <strong className="text-white">RUC: 20492571718</strong>
+            </p>
             <p className="text-white/60 mb-6">
-              Tu ferretería digital de confianza. Todo lo que necesitas para tus proyectos 
-              de construcción y mejoras del hogar.
+              Empresa 100% peruana desde 2008. Materiales de construcción, 
+              eléctricos, gasfitería, pintura, cerámicos y sanitarios.
             </p>
             <div className="flex gap-4">
               <a
@@ -65,9 +70,18 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/60">Teléfono</p>
-                  <a href="tel:+5119876543" className="hover:text-primary transition-colors">
-                    (01) 987 6543
+                  <p className="text-white/60">Teléfono Fijo</p>
+                  <a href="tel:+5114717618" className="hover:text-primary transition-colors">
+                    (01) 471-7618
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <Smartphone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-white/60">Celular</p>
+                  <a href="tel:+51970856345" className="hover:text-primary transition-colors">
+                    970 856 345
                   </a>
                 </div>
               </li>
@@ -75,16 +89,16 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Correo</p>
-                  <a href="mailto:contacto@ferrot.pe" className="hover:text-primary transition-colors">
-                    contacto@ferrot.pe
+                  <a href="mailto:ferroteirl@hotmail.com" className="hover:text-primary transition-colors text-sm">
+                    ferroteirl@hotmail.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/60">Dirección</p>
-                  <p>Av. Javier Prado Este 123, San Isidro, Lima, Perú</p>
+                  <p className="text-white/60">Tienda</p>
+                  <p>Av. José Leal 1089, Lince, Lima - Perú</p>
                 </div>
               </li>
             </ul>
