@@ -15,6 +15,8 @@ const Footer = () => {
                 src={logoFerrot} 
                 alt="Ferrot E.I.R.L." 
                 className="h-14 w-auto brightness-110 drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
+                width={56}
+                height={56}
               />
             </div>
             <p className="text-white/60 mb-4">

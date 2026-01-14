@@ -24,6 +24,8 @@ const Header = () => {
               src={logoFerrot} 
               alt="Ferrot E.I.R.L. - Ferretería Digital" 
               className="h-14 w-auto"
+              width={56}
+              height={56}
             />
           </a>
 
