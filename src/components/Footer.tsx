@@ -17,6 +17,8 @@ const Footer = () => {
                 className="h-14 w-auto brightness-110 drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]"
                 width={56}
                 height={56}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-white/60 mb-4">

@@ -68,6 +68,8 @@ const ProductsSection = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ferrot-black/90 via-ferrot-black/40 to-transparent" />
               </div>
