@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Smartphone } from "lucide-react";
-import logoFerrot from "@/assets/logo-ferrot.jpg";
+import logoFerrot from "@/assets/logo-ferrot-transparent.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
