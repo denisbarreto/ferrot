@@ -52,15 +52,15 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         ferrot: {
-          red: "hsl(var(--ferrot-red))",
-          "red-dark": "hsl(var(--ferrot-red-dark))",
-          "red-light": "hsl(var(--ferrot-red-light))",
+          orange: "hsl(var(--ferrot-orange))",
+          "orange-dark": "hsl(var(--ferrot-orange-dark))",
+          "orange-light": "hsl(var(--ferrot-orange-light))",
           black: "hsl(var(--ferrot-black))",
           "gray-dark": "hsl(var(--ferrot-gray-dark))",
           "gray-medium": "hsl(var(--ferrot-gray-medium))",
           "gray-light": "hsl(var(--ferrot-gray-light))",
           metallic: "hsl(var(--ferrot-metallic))",
-          gold: "hsl(var(--ferrot-gold))",
+          brown: "hsl(var(--ferrot-brown))",
         },
       },
       borderRadius: {
@@ -90,8 +90,8 @@ export default {
           to: { opacity: "1", transform: "translateX(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px hsl(0 72% 35% / 0.4)" },
-          "50%": { boxShadow: "0 0 40px hsl(0 72% 35% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(25 82% 52% / 0.4)" },
+          "50%": { boxShadow: "0 0 40px hsl(25 82% 52% / 0.6)" },
         },
       },
       animation: {
