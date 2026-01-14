@@ -14,6 +14,14 @@ const Header = () => {
     { label: "Contacto", href: "#contacto" },
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contacto");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-secondary/20 shadow-sm">
       <div className="container mx-auto px-4">
@@ -48,7 +56,7 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">(01) 471-7618</span>
             </a>
-            <Button variant="cta" size="lg">
+            <Button variant="cta" size="lg" onClick={scrollToContact}>
               Solicita tu Cotización
             </Button>
           </div>
@@ -77,7 +85,7 @@ const Header = () => {
               </a>
             ))}
             <div className="pt-4 mt-4 border-t border-secondary/10">
-              <Button variant="cta" size="lg" className="w-full">
+              <Button variant="cta" size="lg" className="w-full" onClick={scrollToContact}>
                 Solicita tu Cotización
               </Button>
             </div>
