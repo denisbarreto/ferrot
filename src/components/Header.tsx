@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoFerrot from "@/assets/logo-ferrot.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,17 +15,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-ferrot-black/95 backdrop-blur-sm border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-secondary/20 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-xl">F</span>
-            </div>
-            <span className="text-white font-heading font-bold text-2xl tracking-tight">
-              Ferrot
-            </span>
+          <a href="#inicio" className="flex items-center">
+            <img 
+              src={logoFerrot} 
+              alt="Ferrot E.I.R.L. - Ferretería Digital" 
+              className="h-14 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -33,7 +33,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-white/80 hover:text-primary font-medium transition-colors duration-300 text-sm uppercase tracking-wider"
+                className="text-secondary hover:text-primary font-medium transition-colors duration-300 text-sm uppercase tracking-wider"
               >
                 {item.label}
               </a>
@@ -42,7 +42,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+5119876543" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+            <a href="tel:+5119876543" className="flex items-center gap-2 text-secondary hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">(01) 987 6543</span>
             </a>
@@ -53,7 +53,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-secondary p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,18 +63,18 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-white/10 animate-fade-in">
+          <nav className="lg:hidden py-4 border-t border-secondary/10 animate-fade-in bg-white">
             {menuItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-3 text-white/80 hover:text-primary font-medium transition-colors text-sm uppercase tracking-wider"
+                className="block py-3 text-secondary hover:text-primary font-medium transition-colors text-sm uppercase tracking-wider"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <div className="pt-4 mt-4 border-t border-white/10">
+            <div className="pt-4 mt-4 border-t border-secondary/10">
               <Button variant="cta" size="lg" className="w-full">
                 Solicita tu Cotización
               </Button>

@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 8%;
 
-    --primary: 0 72% 35%;
+    --primary: 25 82% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 18%;
+    --secondary: 0 0% 45%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 92%;
@@ -32,31 +32,31 @@
 
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 0 72% 35%;
+    --ring: 25 82% 52%;
 
     --radius: 0.5rem;
 
     /* Custom Ferrot tokens */
-    --ferrot-red: 0 72% 35%;
-    --ferrot-red-dark: 0 72% 28%;
-    --ferrot-red-light: 0 72% 45%;
+    --ferrot-orange: 25 82% 52%;
+    --ferrot-orange-dark: 25 82% 42%;
+    --ferrot-orange-light: 25 82% 62%;
     --ferrot-black: 0 0% 8%;
-    --ferrot-gray-dark: 0 0% 18%;
-    --ferrot-gray-medium: 0 0% 35%;
+    --ferrot-gray-dark: 0 0% 35%;
+    --ferrot-gray-medium: 0 0% 50%;
     --ferrot-gray-light: 0 0% 92%;
-    --ferrot-metallic: 220 10% 50%;
-    --ferrot-gold: 40 80% 50%;
+    --ferrot-metallic: 30 10% 55%;
+    --ferrot-brown: 25 30% 30%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 15%) 100%);
-    --gradient-red: linear-gradient(135deg, hsl(0 72% 35%) 0%, hsl(0 72% 28%) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(25 82% 52%) 0%, hsl(25 82% 42%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
 
     /* Shadows */
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
     --shadow-card-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.15);
-    --shadow-red: 0 4px 20px -4px hsl(0 72% 35% / 0.4);
-    --shadow-red-hover: 0 8px 30px -6px hsl(0 72% 35% / 0.5);
+    --shadow-orange: 0 4px 20px -4px hsl(25 82% 52% / 0.4);
+    --shadow-orange-hover: 0 8px 30px -6px hsl(25 82% 52% / 0.5);
   }
 
   .dark {
@@ -69,10 +69,10 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 72% 45%;
+    --primary: 25 82% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 20%;
+    --secondary: 0 0% 30%;
     --secondary-foreground: 0 0% 98%;
 
     --muted: 0 0% 20%;
@@ -86,7 +86,7 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 72% 45%;
+    --ring: 25 82% 55%;
   }
 }
 
@@ -107,9 +107,9 @@
 }
 
 @layer utilities {
-  .text-gradient-red {
+  .text-gradient-orange {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(0 72% 45%) 0%, hsl(0 72% 35%) 100%);
+    background-image: linear-gradient(135deg, hsl(25 82% 55%) 0%, hsl(25 82% 45%) 100%);
   }
 
   .bg-hero-gradient {
@@ -121,10 +121,10 @@
   }
 
   .shadow-ferrot {
-    box-shadow: 0 4px 20px -4px hsl(0 72% 35% / 0.4);
+    box-shadow: 0 4px 20px -4px hsl(25 82% 52% / 0.4);
   }
 
   .shadow-ferrot-hover {
-    box-shadow: 0 8px 30px -6px hsl(0 72% 35% / 0.5);
+    box-shadow: 0 8px 30px -6px hsl(25 82% 52% / 0.5);
   }
 }
