@@ -37,18 +37,18 @@ const HeroSection = () => {
           <div className="text-white animate-fade-in-up">
             <div className="inline-block px-4 py-2 bg-primary/20 border border-primary/40 rounded-full mb-6">
               <span className="text-primary text-sm font-semibold uppercase tracking-wider">
-                Ferretería Digital #1 en Perú
+                Desde 2008 al servicio del Perú
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black leading-tight mb-6">
-              Todo en Ferretería y Materiales para{" "}
-              <span className="text-primary">tus Proyectos</span>
+              Todo lo que necesitas...{" "}
+              <span className="text-primary">¡Nosotros lo tenemos!</span>
             </h1>
 
             <p className="text-xl text-white/70 mb-8 max-w-xl">
-              Entrega rápida, asesoría técnica y precios competitivos. 
-              Tu proyecto es nuestra prioridad.
+              Materiales de construcción, eléctricos, gasfitería, pintura, cerámicos y sanitarios. 
+              Calidad y eficiencia para la satisfacción de nuestros clientes.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
@@ -66,11 +66,15 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-6 text-sm text-white/60">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full" />
-                +10,000 clientes satisfechos
+                +16 años de experiencia
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full" />
-                Envío a todo el Perú
+                Clientes institucionales y privados
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                Amplio stock disponible
               </div>
             </div>
           </div>

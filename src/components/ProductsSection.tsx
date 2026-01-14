@@ -8,34 +8,34 @@ import productGarden from "@/assets/product-garden.jpg";
 
 const products = [
   {
-    name: "Herramientas Eléctricas",
-    description: "Taladros, sierras, rotomartillos y más para profesionales.",
-    image: productTools,
-    category: "Herramientas",
-  },
-  {
-    name: "Tornillería Industrial",
-    description: "Tornillos, tuercas, anclas y fijaciones de alta resistencia.",
-    image: productFasteners,
-    category: "Fijación",
-  },
-  {
-    name: "Material Eléctrico",
-    description: "Cables, interruptores, contactos y paneles certificados.",
-    image: productElectrical,
-    category: "Eléctricos",
-  },
-  {
     name: "Materiales de Construcción",
-    description: "Cemento, arena, bloques y todo para tu obra.",
+    description: "Cemento, arena, bloques, fierros y todo lo que necesitas para tu obra.",
     image: productConstruction,
     category: "Construcción",
   },
   {
-    name: "Jardinería",
-    description: "Herramientas y accesorios para el cuidado de tu jardín.",
+    name: "Material Eléctrico",
+    description: "Cables, interruptores, tomacorrientes y paneles. Marcas: Bticino, Philips, GE.",
+    image: productElectrical,
+    category: "Eléctricos",
+  },
+  {
+    name: "Gasfitería y Sanitarios",
+    description: "Tuberías, conexiones, griferías y sanitarios. Marcas: Pavco, Vainsa, Rotoplas.",
+    image: productFasteners,
+    category: "Gasfitería",
+  },
+  {
+    name: "Herramientas Profesionales",
+    description: "Taladros, sierras, rotomartillos. Marcas: DeWalt, Stanley, Bosch, Bahco.",
+    image: productTools,
+    category: "Herramientas",
+  },
+  {
+    name: "Pinturas y Acabados",
+    description: "Pinturas, brochas, rodillos y accesorios. Marcas: Tekno, CPP, American Colors.",
     image: productGarden,
-    category: "Jardín",
+    category: "Pinturas",
   },
 ];
 
