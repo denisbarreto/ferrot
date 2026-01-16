@@ -11,14 +11,12 @@ const Header = () => {
     { label: "Productos", href: "#productos" },
     { label: "Promociones", href: "#promociones" },
     { label: "Nosotros", href: "#nosotros" },
-    { label: "Contacto", href: "#contacto" },
   ];
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contacto");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const whatsappUrl = "https://wa.me/51997309508?text=" + encodeURIComponent("Hola, me interesa solicitar una cotización.");
+
+  const openWhatsApp = () => {
+    window.open(whatsappUrl, "_blank");
     setIsMenuOpen(false);
   };
 
@@ -56,7 +54,7 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">(01) 471-7618</span>
             </a>
-            <Button variant="cta" size="lg" onClick={scrollToContact}>
+            <Button variant="cta" size="lg" onClick={openWhatsApp}>
               Solicita tu Cotización
             </Button>
           </div>
@@ -85,7 +83,7 @@ const Header = () => {
               </a>
             ))}
             <div className="pt-4 mt-4 border-t border-secondary/10">
-              <Button variant="cta" size="lg" className="w-full" onClick={scrollToContact}>
+              <Button variant="cta" size="lg" className="w-full" onClick={openWhatsApp}>
                 Solicita tu Cotización
               </Button>
             </div>
