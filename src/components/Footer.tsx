@@ -64,8 +64,8 @@ const Footer = () => {
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Correo</p>
-                  <a href="mailto:ferroteirl@hotmail.com" className="hover:text-primary transition-colors text-sm">
-                    ferroteirl@hotmail.com
+                  <a href="mailto:ventas@ferrot.pe" className="hover:text-primary transition-colors">
+                    ventas@ferrot.pe
                   </a>
                 </div>
               </li>
