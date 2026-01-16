@@ -79,7 +79,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors inline-flex items-center gap-1"
                   >
-                    Av. José Leal 1089, Lince, Lima
+                    Av. José Leal 1077, Lince, Lima
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
