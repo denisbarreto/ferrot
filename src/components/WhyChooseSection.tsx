@@ -26,19 +26,6 @@ const clientsWithLogos = [
   { name: "Congreso de la República", logo: logoCongreso },
 ];
 
-const additionalClients = [
-  "Scotiabank",
-  "OSCE",
-  "Ministerio de Energía y Minas",
-  "Ministerio de Transporte",
-  "Constructora Titan",
-  "Programa JUNTOS",
-  "Hospital de Emergencias Pediátricas",
-  "Clínica Stella Maris",
-  "Clínica Limatambo",
-  "Aldeas Infantiles S.O.S",
-];
-
 const WhyChooseSection = () => {
   return (
     <section id="nosotros" className="py-16 md:py-20 bg-muted">
@@ -87,7 +74,7 @@ const WhyChooseSection = () => {
             </p>
 
             {/* Client Logos Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6 mb-6 md:mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
               {clientsWithLogos.map((client) => (
                 <div
                   key={client.name}
@@ -105,18 +92,6 @@ const WhyChooseSection = () => {
                 <MoreHorizontal className="w-8 h-8 text-primary mb-2" />
                 <span className="text-primary font-bold text-sm">Y más...</span>
               </div>
-            </div>
-
-            {/* Additional Clients as Tags */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-              {additionalClients.map((client) => (
-                <span
-                  key={client}
-                  className="px-3 md:px-4 py-1.5 md:py-2 bg-muted rounded-full text-xs md:text-sm font-medium text-foreground hover:bg-primary hover:text-white transition-colors cursor-default"
-                >
-                  {client}
-                </span>
-              ))}
             </div>
           </div>
         </div>
