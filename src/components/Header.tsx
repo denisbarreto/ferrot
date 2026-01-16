@@ -91,12 +91,9 @@ const Header = () => {
             <div className="pt-4 mt-4 border-t border-secondary/10">
               <a 
                 href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-white hover:bg-primary/85 shadow-ferrot hover:shadow-ferrot-hover font-bold font-heading uppercase tracking-wide h-12 px-8 w-full"
-                onClick={() => setIsMenuOpen(false)}
+                className="block text-center rounded-md text-sm font-semibold bg-primary text-white hover:bg-primary/85 shadow-ferrot font-bold uppercase tracking-wide h-12 leading-[3rem] px-8 w-full"
               >
-                Solicita tu Cotización
+                💬 Solicita tu Cotización
               </a>
             </div>
           </nav>
