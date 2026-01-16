@@ -3,9 +3,7 @@ import { ArrowRight, FileText } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const scrollToContact = () => {
-    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
-  };
+  const whatsappUrl = "https://wa.me/51997309508?text=" + encodeURIComponent("Hola, me interesa solicitar una cotización.");
 
   return (
     <section
@@ -41,10 +39,13 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6 md:mb-8 justify-center lg:justify-start">
-              <Button variant="hero" size="lg" className="group text-sm md:text-base" onClick={scrollToContact}>
+              <a 
+                href={whatsappUrl}
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-semibold bg-primary text-white hover:bg-primary/90 shadow-ferrot hover:shadow-ferrot-hover font-heading uppercase tracking-wide h-12 px-8 text-sm md:text-base group"
+              >
                 Cotiza Ahora
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              </a>
               <Button 
                 variant="heroOutline" 
                 size="lg" 
