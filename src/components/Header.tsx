@@ -48,14 +48,20 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+5114717618" className="flex items-center gap-2 text-secondary hover:text-primary transition-colors">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a 
+              href="tel:+5114717618" 
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-secondary/20 text-secondary hover:text-primary hover:border-primary/30 transition-all duration-300"
+            >
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">(01) 471-7618</span>
             </a>
+            <Button variant="outline" size="lg" onClick={() => window.open("https://maps.app.goo.gl/6op3tShS8JqqsMy58", "_blank")}>
+              📍 Visítanos
+            </Button>
             <Button variant="cta" size="lg" onClick={openWhatsApp}>
-              Solicita tu Cotización
+              💬 Cotiza Ahora
             </Button>
           </div>
 
