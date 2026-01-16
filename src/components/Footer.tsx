@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Smartphone } from "lucide-react";
+import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 import logoFerrot from "@/assets/logo-ferrot-transparent.png";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-ferrot-black text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6">
@@ -81,15 +81,6 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Smartphone className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-white/60">Celular</p>
-                  <a href="tel:+51970856345" className="hover:text-primary transition-colors">
-                    970 856 345
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Correo</p>
@@ -102,33 +93,20 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/60">Tienda</p>
-                  <p>Av. José Leal 1089, Lince, Lima - Perú</p>
+                  <a 
+                    href="https://maps.app.goo.gl/6op3tShS8JqqsMy58" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors inline-flex items-center gap-1"
+                  >
+                    Av. José Leal 1089, Lince, Lima
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Legal</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-white/60 hover:text-primary transition-colors">
-                  Aviso de Privacidad
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/60 hover:text-primary transition-colors">
-                  Términos y Condiciones
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/60 hover:text-primary transition-colors">
-                  Política de Devoluciones
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Bar */}
