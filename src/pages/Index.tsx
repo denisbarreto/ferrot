@@ -8,7 +8,6 @@ const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
 const ProductsSection = lazy(() => import("@/components/ProductsSection"));
 const BrandsSection = lazy(() => import("@/components/BrandsSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
-const LeadCaptureSection = lazy(() => import("@/components/LeadCaptureSection"));
 const WhyChooseSection = lazy(() => import("@/components/WhyChooseSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
@@ -32,9 +31,6 @@ const Index = () => {
         </Suspense>
         <Suspense fallback={<div className="min-h-[300px]" />}>
           <WhyChooseSection />
-        </Suspense>
-        <Suspense fallback={<div className="min-h-[400px]" />}>
-          <LeadCaptureSection />
         </Suspense>
       </main>
       <Suspense fallback={<div className="min-h-[300px]" />}>
