@@ -1,4 +1,12 @@
 import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -40,41 +48,55 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.name}
-              className="bg-background rounded-2xl p-8 shadow-lg relative group hover:shadow-xl transition-all duration-300"
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/20" />
-              
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-ferrot-gold text-ferrot-gold" />
-                ))}
-              </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+              stopOnInteraction: true,
+            }),
+          ]}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent className="-ml-4">
+            {testimonials.map((testimonial) => (
+              <CarouselItem key={testimonial.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <div className="bg-background rounded-2xl p-8 shadow-lg relative group hover:shadow-xl transition-all duration-300 h-full">
+                  <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/20" />
+                  
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-ferrot-gold text-ferrot-gold" />
+                    ))}
+                  </div>
 
-              <p className="text-foreground/80 mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-heading font-bold">
-                  {testimonial.avatar}
-                </div>
-                <div>
-                  <h4 className="font-heading font-bold text-foreground">
-                    {testimonial.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
+                  <p className="text-foreground/80 mb-6 leading-relaxed">
+                    "{testimonial.content}"
                   </p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-heading font-bold">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-foreground">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
+        </Carousel>
       </div>
     </section>
   );
