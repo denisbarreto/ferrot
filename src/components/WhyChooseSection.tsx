@@ -1,4 +1,12 @@
-import { CheckCircle, Award, Building2, Users } from "lucide-react";
+import { CheckCircle, Building2, MoreHorizontal } from "lucide-react";
+
+// Client logos
+import logoBetz from "@/assets/clients/betz.png";
+import logoClubPetroperu from "@/assets/clients/club-petroperu.png";
+import logoSP from "@/assets/clients/sp.png";
+import logoYMSA from "@/assets/clients/ymsa.png";
+import logoIGP from "@/assets/clients/igp.png";
+import logoCongreso from "@/assets/clients/congreso.png";
 
 const features = [
   "Empresa 100% peruana desde 2008",
@@ -9,7 +17,16 @@ const features = [
   "Vendedores especializados",
 ];
 
-const clients = [
+const clientsWithLogos = [
+  { name: "Betz", logo: logoBetz },
+  { name: "Club Petroperú", logo: logoClubPetroperu },
+  { name: "S&P", logo: logoSP },
+  { name: "YMSA Constructora", logo: logoYMSA },
+  { name: "Instituto Geofísico del Perú", logo: logoIGP },
+  { name: "Congreso de la República", logo: logoCongreso },
+];
+
+const additionalClients = [
   "Scotiabank",
   "OSCE",
   "Ministerio de Energía y Minas",
@@ -68,8 +85,31 @@ const WhyChooseSection = () => {
               Contamos con una amplia y generosa cartera de clientes satisfechos entre los que se 
               encuentran empresas privadas e instituciones del Estado.
             </p>
+
+            {/* Client Logos Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6 mb-6 md:mb-8">
+              {clientsWithLogos.map((client) => (
+                <div
+                  key={client.name}
+                  className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 flex items-center justify-center aspect-square"
+                >
+                  <img
+                    src={client.logo}
+                    alt={`Logo ${client.name}`}
+                    className="w-full h-full object-contain max-h-16 md:max-h-20"
+                  />
+                </div>
+              ))}
+              {/* "Y más" card */}
+              <div className="bg-primary/10 rounded-xl p-4 shadow-sm flex flex-col items-center justify-center aspect-square">
+                <MoreHorizontal className="w-8 h-8 text-primary mb-2" />
+                <span className="text-primary font-bold text-sm">Y más...</span>
+              </div>
+            </div>
+
+            {/* Additional Clients as Tags */}
             <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-              {clients.map((client) => (
+              {additionalClients.map((client) => (
                 <span
                   key={client}
                   className="px-3 md:px-4 py-1.5 md:py-2 bg-muted rounded-full text-xs md:text-sm font-medium text-foreground hover:bg-primary hover:text-white transition-colors cursor-default"
